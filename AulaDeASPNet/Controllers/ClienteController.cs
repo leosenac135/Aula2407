@@ -42,7 +42,7 @@ namespace AulaDeASPNet.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (cliente.Id == 0)
+                if (cliente.Id != 0)
                 {
                     await _context.SaveChangesAsync();
                     return RedirectToAction("BuscaClientes");
